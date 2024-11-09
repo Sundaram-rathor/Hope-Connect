@@ -21,16 +21,11 @@
 
 To use Hope Connect, you will need:
 
-- A **Petra Wallet**: Download and set up a Petra Wallet from [here](https://petra.app/).
-- **Aptos Tokens**: Ensure your Petra Wallet has enough Aptos tokens to cover transaction fees.
+- `npm run move:publish` - a command to publish the Move contract
+- `npm run move:test` - a command to run Move unit tests
+- `npm run move:compile` - a command to compile the Move contract
+- `npm run move:upgrade` - a command to upgrade the Move contract
+- `npm run dev` - a command to run the frontend locally
+- `npm run deploy` - a command to deploy the dapp to Vercel
 
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Sundaram-rathor/Hope-Connect.git
-   cd Hope-Connect
-2. npm install
-3. npm start
-
+For all other available CLI commands, can run `npx aptos` and see a list of all available commands.
