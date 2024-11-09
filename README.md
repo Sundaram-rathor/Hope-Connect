@@ -1,40 +1,37 @@
-## Create Aptos Dapp Boilerplate Template
+# Hope Connect
 
-The Boilerplate template provides a starter dapp with all necessary dapp infrastructure and a simple wallet info implementation, transfer APT and a simple message board functionality to send and read a message on chain.
+**Hope Connect** is a decentralized application (DApp) designed to facilitate transparent and secure donations to various organizations using blockchain technology. Built on the **Aptos** blockchain, and leveraging **Petra** and **Remix** for seamless blockchain integration, Hope Connect empowers users to make donations with trust, transparency, and traceability.
 
-## Read the Boilerplate template docs
+## Features
 
-To get started with the Boilerplate template and learn more about the template functionality and usage, head over to the [Boilerplate template docs](https://learn.aptoslabs.com/en/dapp-templates/boilerplate-template)
+- **Decentralized Donations**: Secure and transparent donations are facilitated on the blockchain, allowing users to transfer funds directly to organizations.
+- **Petra Wallet Integration**: Users can connect their Petra wallet, enabling a straightforward and secure way to manage their funds and make donations.
+- **Transparency**: All transactions are stored on the Aptos blockchain, providing complete traceability and accountability for every donation.
+- **Easy to Use**: The app provides an intuitive interface for making donations, with minimal setup and seamless transactions.
 
-## The Boilerplate template provides:
+## Technologies Used
 
-- **Folder structure** - A pre-made dapp folder structure with a `frontend` and `contract` folders.
-- **Dapp infrastructure** - All required dependencies a dapp needs to start building on the Aptos network.
-- **Wallet Info implementation** - Pre-made `WalletInfo` components to demonstrate how one can use to read a connected Wallet info.
-- **Transfer APT implementation** - Pre-made `transfer` components to send APT to an address.
-- **Message board functionality implementation** - Pre-made `message` components to send and read a message on chain
+- **Blockchain**: Built on the [Aptos Blockchain](https://aptos.dev/), which offers a high-performance and scalable environment for DApp development.
+- **Petra Wallet**: Integration with [Petra Wallet](https://petra.app/) allows users to connect their wallets and make secure transactions.
+- **Remix IDE**: [Remix IDE](https://remix.ethereum.org/) was used for smart contract development and testing.
 
-## What tools the template uses?
+## Getting Started
 
-- React framework
-- Vite development tool
-- shadcn/ui + tailwind for styling
-- Aptos TS SDK
-- Aptos Wallet Adapter
-- Node based Move commands
-- [Vite-pwa](https://vite-pwa-org.netlify.app/)
+### Prerequisites
 
-## What Move commands are available?
+To use Hope Connect, you will need:
 
-The tool utilizes [aptos-cli npm package](https://github.com/aptos-labs/aptos-cli) that lets us run Aptos CLI in a Node environment.
+- A **Petra Wallet**: Download and set up a Petra Wallet from [here](https://petra.app/).
+- **Aptos Tokens**: Ensure your Petra Wallet has enough Aptos tokens to cover transaction fees.
 
-Some commands are built-in the template and can be ran as a npm script, for example:
+### Installation
 
-- `npm run move:publish` - a command to publish the Move contract
-- `npm run move:test` - a command to run Move unit tests
-- `npm run move:compile` - a command to compile the Move contract
-- `npm run move:upgrade` - a command to upgrade the Move contract
-- `npm run dev` - a command to run the frontend locally
-- `npm run deploy` - a command to deploy the dapp to Vercel
+1. Clone the repository:
 
-For all other available CLI commands, can run `npx aptos` and see a list of all available commands.
+   ```bash
+   git clone https://github.com/Sundaram-rathor/Hope-Connect.git
+   cd Hope-Connect
+2. npm install
+3. npm start
+
+
