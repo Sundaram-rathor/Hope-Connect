@@ -1,2 +1,11 @@
-import react from 'react'
 
+
+function Afterhome(){
+
+    return(
+        <div>fsldkf</div>
+    )
+
+}
+
+export default Afterhome

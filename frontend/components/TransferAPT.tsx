@@ -9,15 +9,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getAccountAPTBalance } from "@/view-functions/getAccountBalance";
 import { COIN_ABI } from "@/utils/coin_abi";
+import axios from "axios";
 
-export function TransferAPT() {
+export function TransferAPT({walletAdd, orgName}:any) {
   const { account } = useWallet();
   const { client } = useWalletClient();
 
   const queryClient = useQueryClient();
 
   const [aptBalance, setAptBalance] = useState<number>(0);
-  const [recipient, setRecipient] = useState<string>();
+  const [recipient, setRecipient] = useState<string>(walletAdd);
   const [transferAmount, setTransferAmount] = useState<number>();
 
   const { data } = useQuery({
@@ -70,6 +71,19 @@ export function TransferAPT() {
     } catch (error) {
       console.error(error);
     }
+
+    try {
+     const response = await axios.post('http://localhost:3000/api/v1/user/transfer',
+        {
+          orgName,
+          amount:transferAmount,
+          userAdd: account?.address
+        }
+      )
+      console.log(response.data.message)
+    } catch (error) {
+      console.log('error storing data in db :', error)
+    }
   };
 
   useEffect(() => {
@@ -81,7 +95,7 @@ export function TransferAPT() {
   return (
     <div className="flex flex-col gap-6">
       <h4 className="text-lg font-medium">APT balance: {aptBalance / Math.pow(10, 8)}</h4>
-      Recipient <Input disabled={!account} placeholder="0x1" onChange={(e) => setRecipient(e.target.value)} />
+      Recipient : {orgName}<Input readOnly placeholder="0x1" value={recipient} />
       Amount{" "}
       <Input disabled={!account} placeholder="100" onChange={(e) => setTransferAmount(parseFloat(e.target.value))} />
       <Button

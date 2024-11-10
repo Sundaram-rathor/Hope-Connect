@@ -1,6 +1,7 @@
 import { BrowserRouter , Routes,Route } from 'react-router-dom';
-import TransferMoney from '../frontend/components/TransferMoney'
+import Afterhome from '../frontend/components/Afterhome'
 import Home from '../frontend/components/Home'
+import History from './components/History';
 
 function App() {
   
@@ -12,7 +13,8 @@ function App() {
         <Routes>
           
           <Route path="/" element={<Home />} />
-          <Route path="/transfermoney" element={<TransferMoney />} />
+          <Route path="/transfermoney" element={<Afterhome />} />
+          <Route path="/history" element={<History />} />
           
         </Routes>
       </div>
